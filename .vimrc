@@ -35,6 +35,9 @@ set encoding=utf-8
 set laststatus=2
 set ruler
 set guifont=*
+set scrolloff=23
+" set expandtab
+set mouse=n
 
 filetype indent on
 filetype plugin indent on " required
@@ -46,7 +49,7 @@ let mapleader = " "
 " End set mapleader
 
 " Begin set shortcut key NERDTree
-let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen=0
 let g:NERDTreeMinimalUI=1
 nmap <F2> :NERDTreeToggle<CR>
 
@@ -74,5 +77,5 @@ let g:airline_powerline_fonts = 1
 " Begin Setting Shortcuts keyboard switch to the tab
 nmap <leader>1 :bp<CR>
 nmap <leader>2 :bn<CR>
-nmap <C-w> :bd<CR>
+" nmap <C-w> :bd<CR>
 " End Setting Shortcuts keyboard switch to the tab
