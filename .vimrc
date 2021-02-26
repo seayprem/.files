@@ -1,57 +1,130 @@
-" Begin required
-set nocompatible " Be improved, required
-filetype off     " required
-" End required
-
-" Begin Plugin Manager
+" =========================================
+"
+" Plugin Manager 
+"
+" =========================================
 call plug#begin('~/.vim/plugged')
-Plug 'crusoexia/vim-monokai'           " Theme Code 
+
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'christoomey/vim-titlecase'
+Plug 'christoomey/vim-sort-motion'
+" Plug 'christoomey/vim-system-copy'
+Plug 'joshdick/onedark.vim'            " Theme color
 Plug 'vim-airline/vim-airline'         " Theme tab
 Plug 'vim-airline/vim-airline-themes'  " Theme status
 Plug 'scrooloose/nerdtree'             " Show Directory
-Plug 'scrooloose/nerdcommenter'        " Comment code
 Plug 'jiangmiao/auto-pairs'            " Auto complie [] () {}
 Plug 'tpope/vim-fugitive'              " Show status GIT
 Plug 'ctrlpvim/ctrlp.vim'              " Search file & dirs
+Plug 'mattn/emmet-vim'
+
 call plug#end()
-" End Plugin Manager
 
-
-" Theme Color
-colorscheme monokai
+" =========================================
+"
+" Theme Configurations
+"
+" =========================================
+colorscheme onedark
 set termguicolors 
 set t_Co=256
 
-" Begin Basic Config
+
+" =========================================
+"
+" Basic Configurations
+"
+" =========================================
+
+" Don't try to be vi compatible
+set nocompatible
+
 syntax on
+
+" Helps force plugins to load correctly when it is turned back on below
+filetype off
+
+" For plugins to load correctly
+filetype plugin indent on
+
+" Security
+set modelines=0
+
+" Show line numbers
 set nu
 " set rnu
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set backspace=2
-set noswapfile
-set hlsearch
-set encoding=utf-8
-set laststatus=2
+
+" Show file stats
 set ruler
+
+" Blink cursor on error instead of beeping (grr)
+" set visualbell
+
+" Encoding
+set encoding=utf-8
+
+"  Whitespace
+set wrap
+set textwidth=79
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set noshiftround
+
+" Allow all fonts
 set guifont=*
-set scrolloff=23
-" set expandtab
-set mouse=n
 
-filetype indent on
-filetype plugin indent on " required
+" Cursor motion
+set scrolloff=3
+set backspace=indent,eol,start
 
-" End Basic Config
+" Allow hidden buffers
+set hidden
 
-" Begin set mapleader
+" Rendering
+set ttyfast
+
+" Status bar
+set laststatus=2
+
+" Last line
+set showmode
+set showcmd
+
+" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set showmatch
+
+" No swap file or cache file
+set noswapfile
+
+" Color scheme (terminal)
+set t_Co=256
+set background=dark
+
+" Color Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_powerline_fonts = 1
+" let g:airline_theme = 'onedark'
+
+" My Map Leader
 let mapleader = " "
-" End set mapleader
 
-" Begin set shortcut key NERDTree
+" Switch to the tab
+nmap <leader>1 :bp<CR>
+nmap <leader>2 :bn<CR>
+
+" NERDTree shortkey
 let NERDTreeQuitOnOpen=0
-let g:NERDTreeMinimalUI=1
+let g:NREDTreeMinimalUI=1
 nmap <F2> :NERDTreeToggle<CR>
 
 map <C-h> <C-w>h
@@ -59,24 +132,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" End set shortcut key NERDTree
+" Emmet Configurations
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+" Emmet Shortcuts 
+" let g:user_emmet_leader_key='<C-Z>'
 
-" Begin seting shortcut comment
-nmap <C-/> <Plug>NERDCommenterToggle
-vmap <C-/> <Plug>NERDCommenterToggle<CR>
-" End seting shortcut comment
-
-" Begin setting theme airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_powerline_fonts = 1
-
-" let g:airline_theme='monokai'
-" End setting theme airline
-
-" Begin Setting Shortcuts keyboard switch to the tab
-nmap <leader>1 :bp<CR>
-nmap <leader>2 :bn<CR>
-" nmap <C-w> :bd<CR>
-" End Setting Shortcuts keyboard switch to the tab
