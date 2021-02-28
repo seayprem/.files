@@ -74,6 +74,9 @@ set softtabstop=2
 set expandtab
 set noshiftround
 
+" Multiple to read
+set exrc
+
 " Allow all fonts
 set guifont=*
 
