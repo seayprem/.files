@@ -126,6 +126,7 @@ nmap <leader>2 :bn<CR>
 let NERDTreeQuitOnOpen=0
 let g:NREDTreeMinimalUI=1
 nmap <F2> :NERDTreeToggle<CR>
+nmap <Leader>r :NERDTreeFocus<cr> \| R \| <c-w><c-p>
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -133,8 +134,8 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Emmet Configurations
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+" let g:user_emmet_install_global = 0
+" autocmd FileType html,css EmmetInstall
 " Emmet Shortcuts 
 " let g:user_emmet_leader_key='<C-Z>'
 
