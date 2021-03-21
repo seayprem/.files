@@ -110,4 +110,4 @@ source $ZSH/oh-my-zsh.sh
 # }
 #
 # end
-sudotouchid
+# sudotouchid
