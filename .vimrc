@@ -10,6 +10,7 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'christoomey/vim-titlecase'
 Plug 'christoomey/vim-sort-motion'
+Plug 'nlknguyen/papercolor-theme'
 " Plug 'christoomey/vim-system-copy'
 Plug 'joshdick/onedark.vim'            " Theme color
 Plug 'vim-airline/vim-airline'         " Theme tab
@@ -27,9 +28,16 @@ call plug#end()
 " Theme Configurations
 "
 " =========================================
-colorscheme onedark
-set termguicolors 
+
 set t_Co=256
+set t_ut=
+
+if has('termguicolors')
+  set termguicolors
+endif
+
+" colorscheme onedark
+colorscheme PaperColor
 
 
 " =========================================
@@ -109,7 +117,7 @@ set noswapfile
 
 " Color scheme (terminal)
 set t_Co=256
-set background=dark
+set background=light
 
 " Color Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -117,6 +125,7 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 " let g:airline_theme = 'onedark'
+let g:airline_theme = 'papercolor'
 
 " My Map Leader
 let mapleader = " "
@@ -135,6 +144,7 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
 
 " Emmet Configurations
 " let g:user_emmet_install_global = 0
