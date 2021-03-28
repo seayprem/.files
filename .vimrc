@@ -134,11 +134,18 @@ let mapleader = " "
 nmap <leader>1 :bp<CR>
 nmap <leader>2 :bn<CR>
 
+" Close buffer 
+" nmap <leader>c :bw<CR>
+" nmap <leader>t :bd<CR>
+
+
 " NERDTree shortkey
 let NERDTreeQuitOnOpen=0
 let g:NREDTreeMinimalUI=1
+let NERDTreeShowHidden=1
 nmap <F2> :NERDTreeToggle<CR>
 nmap <Leader>r :NERDTreeFocus<cr> \| R \| <c-w><c-p>
+
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
