@@ -145,6 +145,7 @@ let g:NREDTreeMinimalUI=1
 let NERDTreeShowHidden=1
 nmap <F2> :NERDTreeToggle<CR>
 nmap <Leader>r :NERDTreeFocus<cr> \| R \| <c-w><c-p>
+autocmd CursorHold,CursorHoldI * call NERDTreeFocus() | call g:NERDTree.ForCurrentTab().getRoot().refresh() | call g:NERDTree.ForCurrentTab().render() | wincmd w
 
 
 map <C-h> <C-w>h
@@ -159,3 +160,5 @@ map <C-l> <C-w>l
 " Emmet Shortcuts 
 " let g:user_emmet_leader_key='<C-Z>'
 
+" CtrlP Imporve
+let g:ctrlp_use_caching = 0
