@@ -12,7 +12,6 @@ Plug 'christoomey/vim-titlecase'
 Plug 'christoomey/vim-sort-motion'
 Plug 'nlknguyen/papercolor-theme'
 " Plug 'christoomey/vim-system-copy'
-Plug 'joshdick/onedark.vim'            " Theme color
 Plug 'vim-airline/vim-airline'         " Theme tab
 Plug 'vim-airline/vim-airline-themes'  " Theme status
 Plug 'scrooloose/nerdtree'             " Show Directory
@@ -28,9 +27,6 @@ call plug#end()
 " Theme Configurations
 "
 " =========================================
-
-set t_Co=256
-set t_ut=
 
 if has('termguicolors')
   set termguicolors
@@ -117,7 +113,7 @@ set noswapfile
 
 " Color scheme (terminal)
 set t_Co=256
-set background=light
+set background=dark
 
 " Color Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -145,7 +141,7 @@ let g:NREDTreeMinimalUI=1
 let NERDTreeShowHidden=1
 nmap <F2> :NERDTreeToggle<CR>
 nmap <Leader>r :NERDTreeFocus<cr> \| R \| <c-w><c-p>
-autocmd CursorHold,CursorHoldI * call NERDTreeFocus() | call g:NERDTree.ForCurrentTab().getRoot().refresh() | call g:NERDTree.ForCurrentTab().render() | wincmd w
+" autocmd CursorHold,CursorHoldI * call NERDTreeFocus() | call g:NERDTree.ForCurrentTab().getRoot().refresh() | call g:NERDTree.ForCurrentTab().render() | wincmd w
 
 
 map <C-h> <C-w>h
