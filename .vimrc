@@ -108,6 +108,9 @@ set ignorecase
 set smartcase
 set showmatch
 
+" Column Width
+set colorcolumn=80
+
 " No swap file or cache file
 set noswapfile
 
