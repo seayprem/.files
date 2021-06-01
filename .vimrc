@@ -10,7 +10,7 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'christoomey/vim-titlecase'
 Plug 'christoomey/vim-sort-motion'
-Plug 'morhetz/gruvbox'
+Plug 'nlknguyen/papercolor-theme'
 " Plug 'christoomey/vim-system-copy'
 Plug 'vim-airline/vim-airline'         " Theme tab
 Plug 'vim-airline/vim-airline-themes'  " Theme status
@@ -32,7 +32,7 @@ if has('termguicolors')
   set termguicolors
 endif
 
-colorscheme gruvbox
+colorscheme PaperColor
 
 
 " =========================================
@@ -123,7 +123,7 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 " let g:airline_theme = 'onedark'
-let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'papercolor'
 
 " My Map Leader
 let mapleader = " "
