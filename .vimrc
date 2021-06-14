@@ -115,7 +115,7 @@ set noswapfile
 
 " Color scheme (terminal)
 set t_Co=256
-set background=light
+set background=dark
 
 " Color Airline
 let g:airline#extensions#tabline#enabled = 1
