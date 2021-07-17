@@ -126,3 +126,5 @@ let g:mta_filetypes = {
     \ 'jinja' : 1,
     \}
 
+" Commentary keybind
+noremap <leader>/ :Commentary<CR>
