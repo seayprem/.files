@@ -37,7 +37,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround' " Surrounding ysw cw
 Plug 'tpope/vim-commentary' " For Comment Code use gcc || gc
 Plug 'vim-airline/vim-airline' " Status Bar
-Plug 'scrooloose/nerdtree' " NerdTree Structure directory
+Plug 'scrooloose/nerdtree' " NerdTree Structure directory Space bar to refresh
 Plug 'ryanoasis/vim-devicons' " Icon folder & Language
 Plug 'terryma/vim-multiple-cursors' " Ctrl + N => Multicursor
 Plug 'majutsushi/tagbar' " Tagbar navigation
@@ -60,6 +60,7 @@ colorscheme onedark
 
 " NerdTree Config
 nnoremap <silent> <expr> <F2> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
+
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
