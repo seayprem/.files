@@ -24,6 +24,7 @@ set laststatus=2
 set ttyfast
 set exrc
 set textwidth=79
+set nohlsearch
 filetype plugin indent on
 let mapleader = " "
 if (has("termguicolors"))
@@ -47,7 +48,8 @@ Plug 'mattn/emmet-vim' " For HTML5 use CTRL + Y + ,
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive' " For keybind github
-Plug 'jiangmiao/auto-pairs' " Auto Collon
+Plug 'jiangmiao/auto-pairs' " Auto collon
+
 
 call plug#end()
 
@@ -91,6 +93,3 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-
-
-
