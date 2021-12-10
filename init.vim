@@ -9,7 +9,7 @@ set softtabstop=2
 set expandtab
 set autoindent
 set number
-set relativenumber
+" set relativenumber
 set ignorecase
 set smartcase
 set incsearch
@@ -49,8 +49,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive' " For keybind github
 Plug 'jiangmiao/auto-pairs' " Auto collon
-
-
+Plug 'yardnsm/vim-import-cost' " Import Cost
 call plug#end()
 
 " Encoding UTF8
@@ -93,3 +92,17 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" Import Cost Config
+augroup import_cost_auto_run
+  autocmd!
+  autocmd InsertLeave *.js,*.jsx,*.ts,*.tsx ImportCost
+  autocmd BufEnter *.js,*.jsx,*.ts,*.tsx ImportCost
+  autocmd CursorHold *.js,*.jsx,*.ts,*.tsx ImportCost
+augroup END
+
+
+" Airline Config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
