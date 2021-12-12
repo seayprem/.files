@@ -19,6 +19,11 @@ sudo apt install wget
 sudo apt install gnome-tweak-tool
 sudo apt install powerline fonts-powerline
 
+# for coc.nvim
+sudo npm install -g yarn
+yarn install
+yarn build
+
 # vim plug installation
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
