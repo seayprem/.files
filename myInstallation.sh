@@ -10,7 +10,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # generation package
-sudo apt install build-essential cmake
+sudo apt install build-essential cmake libssl-dev clang
 sudo apt install vim
 sudo apt install tmux
 sudo apt install zsh
