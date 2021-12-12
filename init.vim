@@ -27,11 +27,12 @@ set textwidth=79
 set nohlsearch
 filetype plugin indent on
 let mapleader = " "
-if (has("termguicolors"))
-  set termguicolors
-endif
+" if (has("termguicolors"))
+"   set termguicolors
+" endif
 " setting colors
-set t_Co=256
+" set t_Co=256
+set background=dark
 
 " Plugin Installed
 call plug#begin('~/.vim/plugged')
@@ -42,7 +43,7 @@ Plug 'scrooloose/nerdtree' " NerdTree Structure directory Space bar to refresh
 Plug 'ryanoasis/vim-devicons' " Icon folder & Language
 Plug 'terryma/vim-multiple-cursors' " Ctrl + N => Multicursor
 Plug 'majutsushi/tagbar' " Tagbar navigation
-Plug 'joshdick/onedark.vim' " Theme one dark
+Plug 'morhetz/gruvbox' " Theme gruvbox
 Plug 'neoclide/coc.nvim' " Auto complete
 Plug 'mattn/emmet-vim' " For HTML5 use CTRL + Y + ,
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -57,7 +58,7 @@ set encoding=UTF-8
 
 " Theme color schema
 syntax on
-colorscheme onedark
+colorscheme gruvbox
 
 " NerdTree Config
 nnoremap <silent> <expr> <F2> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
