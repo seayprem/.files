@@ -18,6 +18,7 @@ sudo apt install curl
 sudo apt install wget
 sudo apt install gnome-tweak-tool
 sudo apt install powerline fonts-powerline
+sudo apt install net-tools
 
 # for coc.nvim
 sudo npm install -g yarn
