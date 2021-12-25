@@ -44,6 +44,7 @@ Plug 'ryanoasis/vim-devicons' " Icon folder & Language
 Plug 'terryma/vim-multiple-cursors' " Ctrl + N => Multicursor
 Plug 'majutsushi/tagbar' " Tagbar navigation
 Plug 'morhetz/gruvbox' " Theme gruvbox
+Plug 'sonph/onehalf', {'rtp': 'vim/'} " Theme onehalf
 Plug 'neoclide/coc.nvim' " Auto complete
 Plug 'mattn/emmet-vim' " For HTML5 use CTRL + Y + ,
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -58,7 +59,8 @@ set encoding=UTF-8
 
 " Theme color schema
 syntax on
-colorscheme gruvbox
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 
 " NerdTree Config
 nnoremap <silent> <expr> <F2> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
