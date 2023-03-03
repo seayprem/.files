@@ -16,3 +16,22 @@
 <br>* Import Cost
 <br>* Styled Components Snippet
 <br>* Live Server
+
+<br><br><br>
+# My vscode extension for 2023
+
+Vscode Extensions
+<br>- TODO.md Kanban Board
+<br>- Draw.io Integration
+<br>- CodeSnap
+<br>- Better Comments
+<br>- Tabnine AI Autocomplete for Javascript, Python, Typescript, PHP, Go, Java, Ruby & more
+<br>- Live Share
+<br>- Git History
+<br>- Prettier - Code Formatter
+<br>- Auto Rename Tag
+<br>- Bracket Pair Colorization Toggler
+<br>- Auto Import Cost
+<br>- Gitlens
+<br>- VS Code Icons
+<br>- env-cmd-file-syntax
