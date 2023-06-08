@@ -35,3 +35,4 @@ Vscode Extensions
 <br>- Gitlens
 <br>- VS Code Icons
 <br>- env-cmd-file-syntax
+<br>- Code Runner
